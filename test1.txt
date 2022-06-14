@@ -1,0 +1,276 @@
+
+
+git add .
+
+
+git commit -m  "PR/CR:T240890
+Title:风扇故障诊断
+Detail:添加风扇故障诊断功能
+Self-test:Pass
+Commit dependency:no
+Merge to other branch:no"
+
+
+git commit -m  "PR/CR:T308889
+Title:开机动画、创建纯净工程
+Detail:添加开机动画、创建纯净工程
+Self-test:Pass
+Commit dependency:no
+Merge to other branch:no"
+
+    PR/CR:T308906
+    Title:【YB05】CPU-USB升级
+    Detail:1.支持NAND Flash，2.支持U盘升级。
+    Self-test:Pass
+    Commit dependency:No
+
+
+git commit -m  "PR:T309157
+Title:按提示长按退出拖车模式或按P档都不会退出拖车模式
+Detail:按提示长按退出拖车模式或按P档都不会退出拖车模式
+Self-test:Pass
+Commit dependency:no
+Merge to other branch:no"
+
+
+git commit -m  "CR:T272130
+Title:modified tp test func
+Detail:cit tp test
+Self-test:Pass
+Commit dependency:No
+Merge to other branch:No"
+
+
+git commit -m  "PR/CR:T305178 
+Title: 去掉交通识别上行转换逻辑
+Detail: 去掉交通识别上行转换逻辑
+Self-test:Pass
+Commit dependency:no
+Merge to other branch:no"
+
+git commit -m  "CR:T243837
+Title: 影像子系统--哨兵apk
+Detail: 影像子系统--哨兵apk
+Self-test:Pass
+Commit dependency:no
+Merge to other branch:no"
+
+
+
+
+source build/envsetup.sh
+lunch lito-userdebug     
+make update-api -j16
+bash build.sh dist -j16 2>&1 | tee build_android.log
+
+
+
+
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Di4.0/manifest -b dilink4.0_dev -m manifest_dev_system1_bydautoservice_acquisitionservice.xml
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Di4.0/manifest -b dilink4.0_dev -m manifest_dev_other.xml
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Di4.0/manifest -b dilink4.0_dev -m manifest_dev_other.xml
+
+repo init -u ssh://zhao.fan2@10.4.0.169:29418/Di4.0/manifest -b dilink4.0_dev -m manifest_dev_other.xml
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Di4.0/manifest -b dilink4.0_dev -m manifest_dev_other.xml
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Qualcomm_Bitra.LA.1.0 -b dilink4.0_dev -m manifest_dev_other.xml
+repo init -u ssh://zhao.fan2@10.3.3.51:29418/Di4.0/manifest -b dilink4.0_dev -m manifest_dev_other.xml 
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/Qualcomm_Bitra.LA.1.0 HEAD:refs/for/dilink4.0_dev 
+
+git push ssh://zhao.fan2@10.8.9.113:29418/Qualcomm_Bitra.LA.1.0 HEAD:refs/for/dilink4.0_dev 
+
+
+
+git clone ssh://zhao.fan2@10.3.6.3:29418/Qualcomm_Bitra.LA.1.0 -b dilink4.0_dev && scp -p -P 29418 zhao.fan2@10.3.6.3:hooks/commit-msg Qualcomm_Bitra.LA.1.0/.git/hooks/ 
+
+
+
+
+repo init -u  ssh://zhao.fan2@10.3.6.3:29418/Di3.0/manifest -b rse_new_dev -m manifest_dev_other.xml
+git push ssh://zhao.fan2@10.4.0.169:29418/QCM6125.LA.1.0/ap HEAD:refs/for/rse_new_dev
+
+
+repo init -u ssh://li.tong1@10.3.6.3:29418/MT2712_UPDATE/manifest -b r3_hmi_dev -m manifest_dev_other.xml
+
+git push ssh://zhao.fan2@10.4.0.169:29418/MT2712_UPDATE HEAD:refs/for/r3_hmi_dev
+
+repo init -u ssh://du.yuchen@10.3.6.3:29418/Di3.0/manifest -b panshi_dev -m manifest_dev_other.xml
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/QCM6125.LA.1.0/ap HEAD:refs/for/panshi_dev
+
+
+git clone ssh://xxxxxx@10.3.6.3:29418/YB05_IT9866 -b yb05_main_dev
+git push ssh://zhao.fan2@10.4.0.169:29418/YB05_IT9866 HEAD:refs/for/yb05_main_dev
+
+ 
+make update-api -j32
+bash build.sh dist -j32 2>&1 | tee build_android.log
+ 
+ 
+
+git commit --amend 
+
+服务器端主要用来转发消息维护手机、车机、智能家居端的关系、也可以用来储存留言记录等
+
+git push ssh://zhao.fan2@10.4.0.169:29418/QCM6125.LA.1.0/ap HEAD:refs/for/dilink3.0_dev
+
+git push ssh://zhao.fan2@10.4.0.169:29418/QCM6125.LA.1.0/ap  HEAD:refs/for/dilink3.0_dev
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/CodeCompetition/GreatTeam HEAD:refs/for/master
+
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/Snapdragon_High_Med_2016.SPF.2.0/ap HEAD:refs/for/di2l_3.0ui_feature_ditrainer_200811_dev
+git pull ssh://zhao.fan2@10.4.0.169:29418/Snapdragon_High_Med_2016.SPF.2.0/ap 
+git push ssh://zhao.fan2@10.4.0.169:29418/SA6155 HEAD:refs/for/sa6155_dev
+
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_2in1_dev
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_dev_main
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_canfd_dev
+
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1h_mtk_dev_main
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_canfd_dev_SOP0902
+
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_2in1_dev
+
+git pull ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_canfd_dev  
+
+git pull ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_dev_main  
+
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Di2.2L_MT6761/manifest -b di2.1l_mtk_dev_main -m manifest_dev_other.xml
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Di2.2L_MT6761/manifest -b di2.1l_mtk_2in1_dev -m manifest_dev_other.xml
+
+
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Di2.2L_MT6761/manifest -b di2.1h_mtk_dev_main -m manifest_dev_other.xml
+
+
+repo init -u ssh://zhao.fan2@10.3.6.3:29418/Di2.2L_MT6761/manifest -b di2.1l_mtk_canfd_dev_SOP0902 -m manifest_dev_other.xml
+
+
+repo init -u ssh://du.yuchen@10.3.6.3:29418/Di3.0/manifest -b panshi_dev -m manifest_dev_other.xml
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/Snapdragon_High_Med_2016.SPF.2.0/ap HEAD:refs/for/di2ul_3.0ui_new_feature_dev
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_dev_main
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_dev_main
+git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_canfd_dev
+
+git push ssh://zhao.fan2@10.4.0.169:29418/Snapdragon_High_Med_2016.SPF.2.0/ap  HEAD:refs/for/di2l_3.0ui_20191225_dev
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/QCM6125.LA.1.0/ap  HEAD:refs/for/dilink3.0_dev
+
+
+git push ssh://zhao.fan2@10.4.0.169:29418/Android-10.0.0_r36   HEAD:refs/for/dilink3.0_sdk_dev
+
+
+ git push  ssh://zhao.fan2@10.3.6.3:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_2in1_dev
+ 
+ git push ssh://zhao.fan2@10.4.0.169:29418/MT6761_P HEAD:refs/for/di2.1l_mtk_2in1_dev
+ 
+ 
+ repo init -u ssh://zhao.fan2@10.4.0.169:29418/AutoElectronic/manifest -b di2ul_3.0ui_new_feature_dev -m  manifest_dev_other.xml
+ 
+ repo init -u ssh://zhao.fan2@10.3.6.3:29418/AutoElectronic/manifest -b di2ul_3.0ui_new_feature_dev -m  manifest_dev_other.xml
+ 
+ repo init -u ssh://zhao.fan2@10.3.6.3:29418/AutoElectronic/manifest -b di2l_3.0ui_20191225_dev -m  manifest_dev_other.xml
+  
+ repo init -u ssh://liu.hao3@10.4.0.169:29418/AutoElectronic/manifest -b di2ul_canfd_main_dev -m  manifest_dev_other.xml
+   
+ repo init -u ssh://zhao.fan2@10.3.6.3:29418/AutoElectronic/manifest -b di2ul_3.0ui_main_dev -m  manifest_dev_other.xml
+ 
+ 
+ git clone ssh://zhao.fan2@10.3.6.4:29418/byd_dms  -b byd_dms_branch
+ 
+  git push ssh://zhaofan2@10.3.6.4:29418/byd_dms HEAD:refs/for/byd_dms_branch
+ 
+ 
+b01GCOgX+tEJmZKRaURPleIxt0M5X9X9MKQEG4R1+w
+ 
+ 
+  repo init -u ssh://zhao.fan2@10.4.0.169:29418/AutoElectronic/manifest -b 	dilink4.0_dev -m  manifest_dev_other.xml
+ 
+ 
+ 
+ 主题，
+ 
+ git clone ssh://zhao.fan2@10.4.0.169:29418/Android-10.0.0_r36  -b HEAD:refs/for/dilink3.0_sdk_dev
+ 
+ 
+ git clone ssh://zhao.fan2@10.3.6.3:29418/Android-9.0.0_r3 -b di2.1l_mtk_sdk_dev
+ 
+ git clone ssh://zhao.fan2@10.3.6.3:29418/Snapdragon_High_Med_2016.SPF.3.1/ap -b ca01_dev
+
+ git clone ssh://zhao.fan2@10.3.6.3:29418/Snapdragon_High_Med_2016.SPF.3.1/ap -b ca01-0917mp-dev
+ 
+ git clone ssh://zhao.fan2@0.3.6.3:29418/Android-9.0.0_r3 -b di2.1l_mtk_sdk_dev
+ 
+ 
+  git clone ssh://zhao.fan2@10.4.0.169:29418/Android-9.0.0_r3 -b di2.1l_mtk_sdk_dev
+ 
+ 
+ 
+ 
+ gitdir=$(git rev-parse --git-dir); scp -p -P 29418 zhao.fan2@10.4.0.169:hooks/commit-msg ${gitdir}/hooks/
+  gitdir=$(git rev-parse --git-dir); scp -p -P 29418 zhao.fan2@10.4.0.169:hooks/commit-msg Qualcomm_Bitra.LA.1.0/.git/hooks/
+ gitdir=$(git rev-parse --git-dir); scp -p -P 29418 zhao.fan2@10.4.0.169:hooks/commit-msg Qualcomm_Bitra.LA.1.0/.git/hooks/
+  
+ 
+
+ git push ssh://zhao.fan2@10.4.0.169:29418/Snapdragon_High_Med_2016.SPF.3.1/ap HEAD:refs/for/ca01_dev
+ 
+git pull ssh://zhao.fan2@10.4.0.169:29418/Snapdragon_High_Med_2016.SPF.3.1/ap  HEAD:refs/for/ca01_dev
+
+
+./keytool-importkeypair -k ./platform.keystore -p android -pk8 platform.pk8 -cert platform.x509.pem -alias androiddebugkey
+
+
+git commit  --amend  "T119661
+
+
+
+git diff -w  vendor/byd/byd_1.mk
+
+
+adb logcat *:I | find "【标签bai关键字，如com.app】"
+
+
+
+source build/envsetup.sh
+lunch sm6150_au-odmmkey-userdebug
+   
+lunch sm6150_au-odmmkey-user
+lunch msm8953_64_au-odmmkey-userdebug
+
+make update-api -j16 && make  -j16 2>&1 | tee buildlog-userdebug.txt
+
+
+
+
+
+repo init -u ssh://zhao.fan2@110.4.0.169:29418/Di2.2L_MT6761/manifest -b di2.1l_mtk_canfd_dev -m manifest_dev_other.xml
+
+
+
+
+
+
+
+make update-api -j16 2>&1 | tee buildlog-userdebug.txt
+
+
+
+git remote -v  
+
+java -Xmx2048m -Djava.library.path=out/host/linux-x86/lib64 -jar out/host/linux-x86/framework/signapk.jar -w build/target/product/security/odmmkey/platform.x509.pem build/target/product/security/platform.pk8 CountryCodeTool-debug.apk CountryCodeTool-debug-signed.apk
