@@ -3,4 +3,4 @@
 
 2.学习git的一些命令，如tag使用
 
-3.git commit --amend -m ""
+
